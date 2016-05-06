@@ -49,11 +49,11 @@
                                 "</div>"+
                                 "<div class='postByLabel-post-extra'>"+
                                 "<ul>"+
-                                "<li><i class='fa fa-user'></i><a href='"+authorUrl+"' rel='author' target=_blank>"+author+"</li>"+
+                                "<li><i class='fa fa-user'></i><a href='"+authorUrl+"' rel='author' target=_blank>"+author+"</a></li>"+
                                 "<li><i class='fa fa-tags'></i>"+categories+"</li>"+
                                 "<li><a href='"+href+"/#comment-form' target=_blank><i class='fa fa-comments'></i>"+comments+"</a></li>"+
                                 "<li><i class='fa fa-clock-o'></i>"+published.dd+"/"+published.mm+"/"+published.yyyy+"</li>"+
-                                "<li><span title='"+updated.dd+"/"+updated.mm+"/"+updated.yyyy+" @ "+updated.hour+":"+updated.minute+":"+updated.second+" "+updated.ampm+"'><i class='fa fa-pencil-square'></i>Edited</span></li>"+
+                                "<li title='"+updated.dd+"/"+updated.mm+"/"+updated.yyyy+" @ "+updated.hour+":"+updated.minute+":"+updated.second+" "+updated.ampm+"'><i class='fa fa-pencil-square'></i> Edited</li>"+
                                 "</ul>"+
                                 "</div>"+
                                 "</div>";
@@ -69,7 +69,7 @@
             return newCat.join(", ");
         }
         function getThumbnail(post,noThumbnail){
-            if(typeof(post.media$thumbnail)!== "undefined") if(typeof(post.media$thumbnail.url)!=="undefined" && post.media$thumbnail.url!="") return post.media$thumbnail.url;
+            if(typeof(post.media$thumbnail)!== "undefined") if(typeof(post.media$thumbnail.url)!=="undefined" && post.media$thumbnail.url!="") return post.media$thumbnail.url.replace("/s72-c/","/s400/");
             return noThumbnail;
         }
         function trimText(text,length){

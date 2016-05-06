@@ -25,8 +25,7 @@
 
 .postByLabel-post-extra ul {
     list-style: none;
-    display: inline;
-    display:flex;
+    display: inline-block;
     width: 100%;
     margin: 5px 0px;
     line-height: 22px;
@@ -36,13 +35,15 @@
     font-size: 15px;
     height: 22px;
     overflow: hidden;
-    flex-orientation: row;
 }
 
 .postByLabel-post-extra ul li {
     float: left;
-    margin-right: 15px;
-    max-width: 20%;
+    padding-right: 10px;
+    box-sizing: border-box;
+    font-size: 11px;
+    text-align: left;
+    max-width:25%;
 }
 
 .postsByLabel a {

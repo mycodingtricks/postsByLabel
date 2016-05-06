@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>postsByLabel.js jQuery Plugin</title>
+        <meta charset="UTF-8">
+        <link href="style.css" rel="stylesheet"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div id="postsByLabel"></div>
+        <script src="jquery.min.js"></script>
+        <script src="postsByLabel.js"></script>
+        <script>
+            (function($){
+                $("#postsByLabel").postsByLabel({
+                    url: "http://www.shubhamtipstricks.blogspot.com",
+                    label: "demo",
+                    postCount: 3
+                });
+            })(jQuery);
+        </script>
+    </body>
+</html>

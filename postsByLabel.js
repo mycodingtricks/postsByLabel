@@ -40,7 +40,7 @@
                         content = trimText(post.summary.$t,settings.textLength),
                         categories = categoriesWithLinks(post.category);
                         
-                    var thumbnail = getThumbnail(post.media$thumbnail.url,content,settings.defaultThumbnail);
+                    var thumbnail = getThumbnail(post,settings.defaultThumbnail);
                         var code = "<div class='postByLabel-post'>"+
                                 "<div class='postByLabel-post-inner'>"+
                                 "<a href='"+href+"'><img src='"+thumbnail+"' width='72px' height='72px'/></a>"+
@@ -68,8 +68,8 @@
             }
             return newCat.join(", ");
         }
-        function getThumbnail(thumbnail,content,noThumbnail){
-            if(typeof(thumbnail)!=="undefined" && thumbnail!="") return thumbnail;
+        function getThumbnail(post,noThumbnail){
+            if(typeof(post.media$thumbnail)!== "undefined") if(typeof(post.media$thumbnail.url)!=="undefined" && post.media$thumbnail.url!="") return post.media$thumbnail.url;
             return noThumbnail;
         }
         function trimText(text,length){
